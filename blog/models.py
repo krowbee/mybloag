@@ -7,3 +7,7 @@ class Post(models.Model):
     date = models.DateField()
     text = models.TextField(max_length=256)
     image = models.ImageField(upload_to='blog_images/')
+
+
+    def __str__(self):
+        return self.title
